@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NHS Information Analyst - Career Path</title>
+<link rel="stylesheet" href="body.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+  <div class="nav-left">
+    <img src="logo.png" alt="NHS Logo">
+  </div>
+
+  <div class="menu-toggle">☰ Menu</div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="role.html">Role</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="nhs.html">NHS</a></li>
+    <li><a href="impact.html">Impact</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="day.html">Day in Life</a></li>
+  </ul>
+
+</nav>
+
+<section class="hero" style="--hero-image: url('home.jpg');">
+  <div class="hero-overlay">
+    <h1>Career Path of an NHS Information Analyst</h1>
+    <p>From entry-level data roles to senior healthcare intelligence positions.</p>
+  </div>
+</section>
+
+<section class="content-preview">
+
+  <div class="section reveal">
+    <h2>Overview of the career path</h2>
+    <p>
+      The career of an NHS Information Analyst typically progresses through structured levels.
+      As experience grows, responsibilities expand from basic reporting to strategic decision-making support.
+    </p>
+  </div>
+
+  <div class="section reveal">
+    <h2>Entry requirements</h2>
+    <p>
+      To start in this career, individuals usually need a combination of education and analytical skills.
+    </p>
+
+    <ul>
+      <li>A degree in data science, mathematics, computer science, or health informatics</li>
+      <li>Strong skills in Excel and basic data analysis tools</li>
+      <li>Understanding of statistics and data interpretation</li>
+      <li>Experience with databases or healthcare data is beneficial</li>
+    </ul>
+  </div>
+
+  <div class="section reveal">
+    <h2>Junior Information Analyst</h2>
+    <p>
+      This is the entry-level role where individuals begin working with NHS data systems.
+    </p>
+
+    <ul>
+      <li>Cleaning and organising datasets</li>
+      <li>Producing basic reports</li>
+      <li>Supporting senior analysts</li>
+      <li>Learning NHS data systems and tools</li>
+    </ul>
+  </div>
+
+  <div class="section reveal">
+    <h2>Information Analyst</h2>
+    <p>
+      At this stage, analysts take full responsibility for producing reports and insights.
+    </p>
+
+    <ul>
+      <li>Creating dashboards using Power BI</li>
+      <li>Analysing hospital performance data</li>
+      <li>Identifying trends in patient care</li>
+      <li>Supporting decision-making in departments</li>
+    </ul>
+  </div>
+
+  <div class="section reveal">
+    <h2>Senior Information Analyst</h2>
+    <p>
+      Senior analysts work on more complex datasets and support strategic decisions.
+    </p>
+
+    <ul>
+      <li>Leading data projects across departments</li>
+      <li>Advising management on healthcare planning</li>
+      <li>Improving data systems and processes</li>
+      <li>Mentoring junior analysts</li>
+    </ul>
+  </div>
+
+  <div class="section reveal">
+    <h2>Advanced career progression</h2>
+    <p>
+      With experience, analysts can progress into higher-level roles in healthcare data science.
+    </p>
+
+    <ul>
+      <li>Data Scientist (NHS or healthcare sector)</li>
+      <li>Health Informatics Specialist</li>
+      <li>Data Analytics Manager</li>
+      <li>Public Health Intelligence Lead</li>
+    </ul>
+  </div>
+
+  <div class="section reveal">
+    <h2>Skills developed over time</h2>
+    <p>
+      As the career progresses, analysts develop more advanced technical and leadership skills.
+    </p>
+
+    <ul>
+      <li>Advanced statistical modelling</li>
+      <li>Predictive analytics for healthcare demand</li>
+      <li>Leadership and project management</li>
+      <li>Strategic decision-making using data</li>
+    </ul>
+  </div>
+
+  <div class="section reveal">
+    <h2>Why this career path matters</h2>
+    <p>
+      This structured progression ensures that NHS data professionals continuously improve their skills.
+      It also ensures the NHS benefits from increasingly advanced analysis over time.
+    </p>
+  </div>
+
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 120);
+  });
+
+  const revealElements = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealElements.forEach(el => observer.observe(el));
+
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
+
+});
+</script>
+
+</body>
+</html>

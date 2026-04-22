@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NHS Information Analyst - Skills</title>
+<link rel="stylesheet" href="body.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+  <div class="nav-left">
+    <img src="logo.png" alt="NHS Logo">
+  </div>
+
+  <div class="menu-toggle">☰ Menu</div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="role.html">Role</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="nhs.html">NHS</a></li>
+    <li><a href="impact.html">Impact</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="day.html">Day in Life</a></li>
+  </ul>
+
+</nav>
+
+<section class="hero" style="--hero-image: url('home.jpg');">
+  <div class="hero-overlay">
+    <h1>Skills of an NHS Information Analyst</h1>
+    <p>Combining technical, analytical, and communication skills to turn data into healthcare decisions.</p>
+  </div>
+</section>
+
+<section class="content-preview">
+
+  <div class="section reveal">
+    <h2>Overview of Skills</h2>
+    <p>
+      NHS Information Analysts need a mix of <span class="highlight">technical, analytical, and communication skills</span>.
+      These allow them to interpret complex healthcare data and explain it clearly to non-technical staff.
+    </p>
+  </div>
+
+  <div class="section reveal">
+    <h2>Technical Skills</h2>
+    <p>
+      These are the core tools used in day-to-day work within the NHS.
+    </p>
+
+    <ul>
+      <li>Excel (data cleaning, formulas, pivot tables)</li>
+      <li>SQL (querying large NHS databases)</li>
+      <li>Power BI (interactive dashboards and visuals)</li>
+      <li>Basic programming (R or Python for advanced analysis)</li>
+    </ul>
+  </div>
+
+  <div class="section reveal">
+    <h2>Analytical Skills</h2>
+    <p>
+      These skills help analysts turn raw data into useful insight.
+    </p>
+
+    <ul>
+      <li>Identifying trends in patient data</li>
+      <li>Understanding healthcare performance metrics</li>
+      <li>Problem-solving using data evidence</li>
+      <li>Forecasting demand for NHS services</li>
+    </ul>
+  </div>
+
+  <div class="section reveal">
+    <h2>Communication Skills</h2>
+    <p>
+      One of the most important parts of the role is explaining findings clearly.
+    </p>
+
+    <ul>
+      <li>Presenting data to doctors and managers</li>
+      <li>Writing clear reports and summaries</li>
+      <li>Translating technical results into simple language</li>
+      <li>Working in multidisciplinary NHS teams</li>
+    </ul>
+  </div>
+
+  <div class="section reveal">
+    <h2>Personal Qualities</h2>
+    <p>
+      These are traits that help someone succeed in this role.
+    </p>
+
+    <ul>
+      <li>Attention to detail</li>
+      <li>Logical thinking</li>
+      <li>Patience when working with large datasets</li>
+      <li>Curiosity and willingness to learn</li>
+    </ul>
+  </div>
+
+  <div class="section reveal">
+    <h2>Why these skills matter</h2>
+    <p>
+      Without these skills, NHS data would be difficult to interpret and use effectively.
+      Together, they allow analysts to improve patient care, reduce waiting times, and support better decision-making.
+    </p>
+  </div>
+
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 120);
+  });
+
+  const revealElements = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealElements.forEach(el => observer.observe(el));
+
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
+
+});
+</script>
+
+</body>
+</html>

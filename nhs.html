@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NHS Information Analyst - NHS System</title>
+<link rel="stylesheet" href="body.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+  <div class="nav-left">
+    <img src="logo.png" alt="NHS Logo">
+  </div>
+
+  <div class="menu-toggle">☰ Menu</div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="role.html">Role</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="nhs.html">NHS</a></li>
+    <li><a href="impact.html">Impact</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="day.html">Day in Life</a></li>
+  </ul>
+
+</nav>
+
+<section class="hero" style="--hero-image: url('home.jpg');">
+  <div class="hero-overlay">
+    <h1>How the NHS Uses Data</h1>
+    <p>Understanding the system behind healthcare and where Information Analysts fit in.</p>
+  </div>
+</section>
+
+<section class="content-preview">
+
+  <div class="section reveal">
+    <h2>Overview of the NHS</h2>
+    <p>
+      The NHS (National Health Service) is the UK’s publicly funded healthcare system.
+      It provides free healthcare at the point of use for millions of patients across hospitals, GP surgeries, and specialist clinics.
+    </p>
+    <p>
+      It is one of the largest healthcare systems in the world, producing huge amounts of patient and operational data every day.
+    </p>
+  </div>
+
+  <div class="section reveal">
+    <h2>How data is used in the NHS</h2>
+    <p>
+      Every interaction in the NHS generates data — from patient admissions to treatments and waiting times.
+    </p>
+
+    <ul>
+      <li>Patient records and medical history</li>
+      <li>Appointment and waiting list data</li>
+      <li>Treatment outcomes and recovery rates</li>
+      <li>Hospital performance and staffing levels</li>
+    </ul>
+  </div>
+
+  <div class="section reveal">
+    <h2>Where Information Analysts fit in</h2>
+    <p>
+      Information Analysts sit in the middle of healthcare and decision-making.
+      They take raw NHS data and convert it into reports and insights.
+    </p>
+
+    <p>
+      This helps:
+    </p>
+
+    <ul>
+      <li>Doctors understand patient trends</li>
+      <li>Managers improve hospital efficiency</li>
+      <li>Government plan healthcare funding</li>
+    </ul>
+  </div>
+
+  <div class="section reveal">
+    <h2>Data flow in the NHS</h2>
+    <p>
+      Data moves through multiple systems before reaching analysts:
+    </p>
+
+    <ul>
+      <li>Patients interact with hospitals or GP services</li>
+      <li>Information is recorded in NHS databases</li>
+      <li>Data is stored securely in national systems</li>
+      <li>Analysts extract and process the data</li>
+      <li>Results are presented to decision-makers</li>
+    </ul>
+  </div>
+
+  <div class="section reveal">
+    <h2>Why NHS data matters</h2>
+    <p>
+      NHS data is critical because it directly affects patient lives.
+      Poor data analysis can lead to delays, inefficiency, and resource shortages.
+    </p>
+
+    <p>
+      Good data analysis improves:
+    </p>
+
+    <ul>
+      <li>Waiting times for treatment</li>
+      <li>Hospital resource planning</li>
+      <li>Emergency response efficiency</li>
+      <li>Long-term healthcare policy decisions</li>
+    </ul>
+  </div>
+
+  <div class="section reveal">
+    <h2>Technology used in the NHS</h2>
+    <p>
+      The NHS relies heavily on digital systems to manage its data.
+    </p>
+
+    <ul>
+      <li>Electronic Health Records (EHR systems)</li>
+      <li>SQL databases for structured data storage</li>
+      <li>Power BI dashboards for reporting</li>
+      <li>Cloud-based health data systems</li>
+    </ul>
+  </div>
+
+  <div class="section reveal">
+    <h2>Why this matters for Information Analysts</h2>
+    <p>
+      Understanding the NHS system helps analysts interpret data correctly.
+      They are not just working with numbers — they are working with real patient outcomes.
+    </p>
+  </div>
+
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 120);
+  });
+
+  const revealElements = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealElements.forEach(el => observer.observe(el));
+
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
+
+});
+</script>
+
+</body>
+</html>

@@ -13,6 +13,8 @@
     <img src="logo.png" alt="NHS Logo">
   </div>
 
+  <div class="menu-toggle">☰ Menu</div>
+
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="role.html">Role</a></li>
@@ -22,7 +24,7 @@
     <li><a href="career.html">Career</a></li>
     <li><a href="day.html">Day in Life</a></li>
   </ul>
-</nav>
+</nav>>
 
 <section class="hero" style="--hero-image: url('home.jpg');">
   <div class="hero-overlay">
@@ -199,7 +201,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
 <span class="globe">🌐</span>
 
 </body>

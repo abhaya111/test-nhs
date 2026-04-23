@@ -1,3 +1,5 @@
+/* ================= RESET ================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +15,7 @@ html, body {
   scroll-behavior: smooth;
 }
 
-/* ================= NAVBAR (IDENTICAL TO HOME) ================= */
+/* ================= NAVBAR (IDENTICAL TO styles.css) ================= */
 
 .navbar {
   position: fixed;
@@ -53,6 +55,7 @@ html, body {
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .nav-links a::after {
@@ -80,7 +83,7 @@ html, body {
   font-weight: 600;
 }
 
-/* ================= HERO (SAME AS HOME) ================= */
+/* ================= HERO ================= */
 
 .hero {
   height: 70vh;
@@ -123,7 +126,7 @@ html, body {
   font-size: 18px;
 }
 
-/* ================= SECTION SYSTEM (REPLACES CARDS) ================= */
+/* ================= SECTION SYSTEM ================= */
 
 .section {
   max-width: 1100px;
@@ -131,9 +134,18 @@ html, body {
   padding: 50px 40px;
 
   background: white;
-  border-radius: 14px;
+  border-radius: 16px;
 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
+}
+
+.section.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* SECTION TITLES */
@@ -141,19 +153,18 @@ html, body {
   font-size: 28px;
   color: #0b2c6b;
   margin-bottom: 15px;
-
   position: relative;
 }
 
 .section h2::before {
   content: "";
   position: absolute;
-  left: -12px;
-  top: 6px;
-  width: 4px;
+  left: -15px;
+  top: 5px;
+  width: 5px;
   height: 85%;
   background: #1d4ed8;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 /* TEXT */
@@ -174,33 +185,66 @@ html, body {
   font-size: 16px;
 }
 
-/* HIGHLIGHT TEXT */
-.highlight {
-  color: #1d4ed8;
-  font-weight: 600;
-}
-
-/* ================= IMPACT BOX (KEEP FOR VISUAL EMPHASIS) ================= */
-
-.impact-box {
+/* HIGHLIGHT BOX */
+.highlight-box {
   background: linear-gradient(135deg, #0b2c6b, #1d4ed8);
   color: white;
-  padding: 25px;
+  padding: 20px;
   border-radius: 12px;
   margin-top: 20px;
 }
 
-/* ================= SCROLL REVEAL ================= */
+/* ================= POSTERS ================= */
 
-.reveal {
-  opacity: 0;
-  transform: translateY(35px);
-  transition: all 0.7s ease;
+.poster-row {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 700px;
 }
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+.poster-row img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  margin-bottom: 15px;
+}
+
+.poster-row h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #0b2c6b;
+}
+
+.poster-row p {
+  font-size: 15px;
+}
+
+/* ================= TEAM SECTION ================= */
+
+.team-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 28px;
+  color: #0b2c6b;
+  margin-bottom: 20px;
+}
+
+.team-box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.team-box p {
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 /* ================= MOBILE ================= */
